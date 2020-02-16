@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Navbar.scss";
 import { SearchForm } from "../SerachForm";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export class Navbar extends Component {
   state = {};
@@ -14,15 +14,16 @@ export class Navbar extends Component {
           <div className="nav__search-form">
             <SearchForm onSearch={onSearch} />
           </div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
+          <ul className="nav__links">
+            <li className="nav__links-link">
+              <NavLink exact to="/">
+                Home
+              </NavLink>
             </li>
-            <li>
-              <Link to="/about">About</Link>
+            <li className="nav__links-link">
+              <NavLink to="/about">About</NavLink>
             </li>
           </ul>
-          {/* <PageMenu /> */}
         </div>
       </nav>
     );

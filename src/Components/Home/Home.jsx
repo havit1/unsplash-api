@@ -5,10 +5,6 @@ import { unsplash } from "../../utils/unsplash";
 import Grid from "../Grid/Grid";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

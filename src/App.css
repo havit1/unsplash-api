@@ -1,3 +1,5 @@
+@import "./Components/styles/base.scss";
+
 .App {
   text-align: center;
 }

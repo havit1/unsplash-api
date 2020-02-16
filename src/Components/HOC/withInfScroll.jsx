@@ -50,6 +50,7 @@ export function withInfScroll(WrappedComponent, getData) {
       let windowRelativeBottom = document.documentElement.getBoundingClientRect()
         .bottom;
       if (windowRelativeBottom < document.documentElement.clientHeight + 1) {
+        this.setState({ fething: true });
         this.nextImages();
       }
     };

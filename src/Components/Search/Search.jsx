@@ -5,10 +5,6 @@ import { withInfScroll } from "../HOC/withInfScroll";
 import Grid from "../Grid/Grid";
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <>

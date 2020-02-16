@@ -5,6 +5,7 @@ class GridItem extends React.PureComponent {
   constructor() {
     super();
     this.state = {
+      prevSpans: 0,
       spans: 0
     };
 
@@ -24,16 +25,23 @@ class GridItem extends React.PureComponent {
     const { image } = this.props;
     const { spans } = this.state;
     return (
-      <div className="grid-item" style={{ gridRowEnd: `span ${spans}` }}>
-        <img src={image.urls.small} alt="" ref={this.imageRef} />
+      <div
+        className="grid-item"
+        style={{
+          gridRowEnd: `span ${spans}`
+        }}
+      >
+        <img src={image.urls.regular} alt="" ref={this.imageRef} />
       </div>
     );
   }
 
   setSpans() {
     const ImageHeight = this.imageRef.current.clientHeight;
-    const rawHeight = 1;
-    const spans = Math.ceil(ImageHeight / rawHeight);
+    const rawHeight = 50;
+    const spans = Math.floor(ImageHeight / rawHeight);
+    console.log(spans);
+
     this.setState({ spans });
   }
 }

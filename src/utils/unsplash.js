@@ -10,10 +10,8 @@ export const unsplash = {
   getPhotosByQuery: (qString, page) => {
     const request = new Request();
 
-    console.log(qString);
-
     return request.get(
-      `https://api.unsplash.com/search/photos?page=1&query=${qString}&page=${page}`,
+      `https://api.unsplash.com/search/photos?page=${page}&query=${qString.toLowerCase()}`,
       {
         Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_API_KEY}`
       }
