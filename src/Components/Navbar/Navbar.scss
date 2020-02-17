@@ -9,6 +9,18 @@ $navbar-margin: 20px;
   color: #fff;
   display: flex;
   justify-content: center;
+  transition: background-color 200ms;
+
+  &.dark {
+    background-color: #000000;
+    a {
+      background-color: rgba(255, 219, 219, 0.349);
+      color: white;
+    }
+    .active {
+      background-color: rgba(226, 5, 5, 0.349);
+    }
+  }
 
   &__content {
     max-width: $page-content-width;

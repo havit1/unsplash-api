@@ -1,0 +1,9 @@
+@import "./Components/styles/base.scss";
+
+.app {
+  &.dark {
+    background-color: rgba(0, 0, 0, 0.849);
+  }
+  text-align: center;
+  transition: background-color 200ms;
+}
