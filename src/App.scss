@@ -1,6 +1,7 @@
 @import "./Components/styles/base.scss";
 
 .app {
+  min-height: 100vh;
   &.dark {
     background-color: rgba(0, 0, 0, 0.849);
   }

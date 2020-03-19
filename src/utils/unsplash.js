@@ -16,5 +16,11 @@ export const unsplash = {
         Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_API_KEY}`
       }
     );
+  },
+  getPhotoById: photoId => {
+    const request = new Request();
+    return request.get(`https://api.unsplash.com/photos/${photoId}`, {
+      Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_API_KEY}`
+    });
   }
 };

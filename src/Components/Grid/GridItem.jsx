@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom";
 import "./GridItem.scss";
 
 class GridItem extends React.PureComponent {
@@ -25,14 +26,18 @@ class GridItem extends React.PureComponent {
     const { image } = this.props;
     const { spans } = this.state;
     return (
-      <div
+      <Link
         className="grid-item"
         style={{
           gridRowEnd: `span ${spans}`
         }}
+        to={{
+          pathname: `/photo/${image.id}`,
+          state: { background: this.props.location }
+        }}
       >
         <img src={image.urls.regular} alt="" ref={this.imageRef} />
-      </div>
+      </Link>
     );
   }
 
@@ -40,10 +45,8 @@ class GridItem extends React.PureComponent {
     const ImageHeight = this.imageRef.current.clientHeight;
     const rawHeight = 50;
     const spans = Math.floor(ImageHeight / rawHeight);
-    console.log(spans);
-
     this.setState({ spans });
   }
 }
 
-export default GridItem;
+export default withRouter(GridItem);

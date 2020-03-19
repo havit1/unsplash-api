@@ -1,0 +1,29 @@
+.home__page-header {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/images/photo.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+
+  & h1 {
+    width: 60%;
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &-input-wrapper {
+    width: 60%;
+    height: 55px;
+    .search-form {
+      height: 100%;
+    }
+  }
+}
