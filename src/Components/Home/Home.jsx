@@ -8,6 +8,10 @@ import { uniqByProp_map } from "../../utils/uniqueValuesOnly";
 import "./Home.scss";
 
 class Home extends Component {
+  componentDidMount() {
+    document.title = "Home"
+  }
+
   render() {
     return (
       <>

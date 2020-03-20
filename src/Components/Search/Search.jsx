@@ -6,6 +6,12 @@ import { uniqByProp_map } from "../../utils/uniqueValuesOnly";
 import Grid from "../Grid/Grid";
 
 class Search extends Component {
+
+  componentDidMount() {
+    document.title = `${this.props.match.params.queryString}`
+  }
+
+
   render() {
     return (
       <section>

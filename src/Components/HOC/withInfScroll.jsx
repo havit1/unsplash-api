@@ -19,7 +19,6 @@ export function withInfScroll(WrappedComponent, getData) {
         this.props.match.params.queryString
       ) {
         this.setImages([]);
-        console.log("Fetching images");
         this.getData(
           this.state.currentPage,
           this,
@@ -46,7 +45,6 @@ export function withInfScroll(WrappedComponent, getData) {
     }
 
     populate = () => {
-      console.log("Scrolling");
       let windowRelativeBottom = document.documentElement.getBoundingClientRect()
         .bottom;
       if (windowRelativeBottom < document.documentElement.clientHeight + 1) {
@@ -57,7 +55,6 @@ export function withInfScroll(WrappedComponent, getData) {
 
     nextImages = () => {
       if (!this.state.hasMore) return;
-      console.log("New images incoming");
 
       this.setState(
         state => {
