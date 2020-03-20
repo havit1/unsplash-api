@@ -1,0 +1,1 @@
+{"version":3,"sources":["GridItem.scss"],"names":[],"mappings":"AAAA,WACE,aAAc,CADhB,eAII,UAAW","file":"3.629f7078.chunk.css","sourcesContent":[".grid-item {\r\n  display: block;\r\n\r\n  > img {\r\n    width: 100%;\r\n  }\r\n}\r\n"]}
